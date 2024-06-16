@@ -128,7 +128,7 @@ function App() {
             </div>
           )}
         </div>
-        <div className='w-[1000px] h-[800px] border-4  rounded-xl overflow-auto'>
+        <div className='w-[1000px] h-[600px] border-4  rounded-xl overflow-auto'>
         
           <div className='w-full h-full p-5 text-3xl flex flex-col items-center'>
              
