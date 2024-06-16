@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root {
+	background-color: black;
+	background-image: url("./assets/memeGIFS/bgFigma.png");
+	background-repeat: repeat;
+	background-size: cover;
+	/* opacity:1; */
+	z-index: -1111111111111;
+	color: white;
+	overflow: hidden;
+} 
