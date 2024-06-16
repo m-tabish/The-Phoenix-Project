@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// Ensure API_KEY is accessed correctly
+ 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 if (!API_KEY) {
@@ -34,7 +34,7 @@ You are in danger of living a life so comfortable and soft that you will die wit
         return text;
     } catch (error) {
         console.error('Error generating content:', error);
-        throw error; // Ensure errors are thrown to be caught in the caller
+        throw error;  
     }
 }
 
