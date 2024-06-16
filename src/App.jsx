@@ -1,4 +1,4 @@
-import { Star,Coolshape,Flower } from 'coolshapes-react';
+import { Coolshape, Flower, Star } from 'coolshapes-react';
 import { marked } from 'marked';
 import { useEffect, useState } from 'react';
 import './App.css';
@@ -88,17 +88,19 @@ function App() {
       <div className='w-screen flex gap-10 mt-2 justify-center items-center text-3xl'>
 
         <span className={`${style}`}><Star size={32} /><span className='m-4 text-purple-400'>Hobbies</span> = {hobbies}</span>
-        <span className={`${style}`}><Coolshape  size={32} /><span className='m-4 text-pink-400'>Goals:</span> {goals}</span>
+        <span className={`${style}`}><Coolshape size={32} /><span className='m-4 text-pink-400'>Goals:</span> {goals}</span>
         <span className={`${style}`}> <Flower size={32} /> <span className='m-4 text-yellow-600'>Profession</span> = {profession}</span>
       </div>
       <div className='flex items-center gap-4 w-screen h-screen justify-around'>
         <div className='flex flex-col items-center gap-2'>
-          <input className="text-black p-2 border border-gray-300 rounded w-48" type="text" placeholder='Enter Time as 00,00,00' id="time_input" />
+        <Coolshape size={60}/>
+          <input className="text-black p-2 border    border-gray-300 rounded w-48" type="text" placeholder='2 hours / 1 week /5 days' id="time_input" />
           <button className="p-2 bg-green-500 text-white rounded hover:bg-green-600" onClick={addTime}>Add Time</button>
+          
           {isTimeAdded ? (
             <button className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600" onClick={callAPI} id="call_api">Search </button>
           ) : (
-            <p>Please enter time first</p>
+             <></>
           )}
           <button className="p-2 bg-yellow-500 text-white rounded hover:bg-yellow-600" onClick={() => setEditInfo(true)}>Edit Data</button>
           {editInfo && (
@@ -113,7 +115,7 @@ function App() {
               <input
                 className="p-2 border text-black border-gray-300 rounded w-48"
                 type="text"
-                placeholder='Goals (If any)'
+                placeholder='Goals '
                 value={newGoals}
                 onChange={(e) => setNewGoals(e.target.value)}
               />
@@ -124,29 +126,31 @@ function App() {
                 value={newProfession}
                 onChange={(e) => setNewProfession(e.target.value)}
               />
-              <button className="p-2 bg-purple-500 text-white rounded hover:bg-purple-600" onClick={changeData}>Change Data</button>
+              <button className="p-2 bg-purple-500 text-white rounded hover:bg-purple-600" onClick={changeData}>Update Data</button>
             </div>
           )}
+              <Coolshape size={60}/>
         </div>
         <div className='w-[1000px] h-[600px] border-4  rounded-xl overflow-auto'>
-        
+
           <div className='w-full h-full p-5 text-3xl flex flex-col items-center'>
-             
+
             <div className="photo-gallery"></div>
             {loading ? (
               <p>Loading...</p>
             ) : (
-              <div className='w-full min-h-full   text-wrap'>
+              <div className='w-full min-h-full   text-wrap flex flex-col'>
                 <div dangerouslySetInnerHTML={{ __html: generatedText }} />
                 {randomImage && (
                   <div className='random-image flex flex-col justify-center items-center gap-5 ' >
-                    <img src={randomImage} alt="Random Meme" /><Coolshape />
+                    <img src={randomImage} alt="Random Meme" />
                   </div>
                 )}
               </div>
             )}
           </div>
         </div>
+            
       </div>
     </>
   );
