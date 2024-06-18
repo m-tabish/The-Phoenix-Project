@@ -143,7 +143,9 @@ function App() {
                 <div dangerouslySetInnerHTML={{ __html: generatedText }} />
                 {randomImage && (
                   <div className='random-image flex flex-col justify-center items-center gap-5 ' >
+                  <br />
                     <img src={randomImage} alt="Random Meme" />
+                    <br />
                   </div>
                 )}
               </div>

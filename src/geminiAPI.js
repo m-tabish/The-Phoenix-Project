@@ -25,7 +25,7 @@ You are in danger of living a life so comfortable and soft that you will die wit
 "You must recognize what you are about to do, highlight what you do not like about it, and spend time visualizing each and every obstacle you can."
 "The ticket to victory often comes down to bringing your very best when you feel your worst."
 "Most wars are won or lost in our own heads."
-"It may be satisfactory, but that's another word for mediocrity. and put the quote in bold and italics with line break above and below. don't repeat the break down  "`;
+"It may be satisfactory, but that's another word for mediocrity. and put the quote in bold and italics with line break above and below. don't repeat the break down . Dont suggest programming language every time try different things and dont start with here are 5 things... "`;
 
     try {
         const result = await model.generateContent(prompt);
