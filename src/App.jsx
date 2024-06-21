@@ -94,7 +94,7 @@ function App() {
       <div className='flex items-center gap-4 w-screen h-screen justify-around'>
         <div className='flex flex-col items-center gap-2'>
         <Coolshape size={60}/>
-          <input className="text-black p-2 border    border-gray-300 rounded w-48" type="text" placeholder='2 hours   / 1 week /5 days' id="time_input" />
+          <input className="text-black p-2 border    border-gray-300 rounded w-48" type="text" placeholder='Enter time wasted' id="time_input" />
           <button className="p-2 bg-green-500 text-white rounded hover:bg-green-600" onClick={addTime}>Add Time</button>
           
           {isTimeAdded ? (
